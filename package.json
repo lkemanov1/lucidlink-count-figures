@@ -5,7 +5,7 @@
   "license": "ISC",
   "author": "lachezar.kemanov",
   "type": "commonjs",
-  "main": "dist/count-figures.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "vitest run",
@@ -18,9 +18,9 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/count-figures.mjs",
-      "require": "./dist/count-figures.js",
-      "types": "./dist/count-figures.d.ts"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { Stack } from "../src/stack" // adjust path if needed
+import { Stack } from "../src/stack"
 
 describe("Stack", () => {
   it("starts empty", () => {

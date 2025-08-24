@@ -1,4 +1,4 @@
-import { Stack } from "./stack";
+import { Stack } from "./stack.js";
 
 /**
  * Find the number of distinct figures in a 2D grid. A figure is defined as a group of
