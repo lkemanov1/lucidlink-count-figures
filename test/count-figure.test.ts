@@ -46,7 +46,7 @@ describe("countFigures", () => {
     let result = countFigures(grid)
     const duration = Date.now() - start
 
-    expect(duration).toBeLessThan(1000) // under 500ms
+    expect(duration).toBeLessThan(1000)
     expect(result).toBe(500000)
   })
 
@@ -59,6 +59,6 @@ describe("countFigures", () => {
     const duration = Date.now() - start
 
     expect(result).toBe(1)
-    expect(duration).toBeLessThan(1000) // under 500ms
+    expect(duration).toBeLessThan(1000)
   })
 })
