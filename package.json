@@ -1,12 +1,13 @@
 {
   "name": "count-figures",
   "version": "1.0.0",
-  "description": "",
+  "description": "A library to count the number of figures in a given 2d matrix.",
   "license": "ISC",
-  "author": "",
+  "author": "lachezar.kemanov",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -14,5 +15,12 @@
     "@types/node": "^24.3.0",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   }
 }

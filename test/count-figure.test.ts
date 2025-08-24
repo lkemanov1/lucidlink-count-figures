@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { countFigures } from "../src/index"
+import { countFigures } from "../src/count-figures"
 
 describe("countFigures", () => {
   it("returns 0 for empty grid", () => {
