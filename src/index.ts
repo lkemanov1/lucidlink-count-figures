@@ -1,5 +1,7 @@
 import { Stack } from "./stack.js";
 
+
+const MAX_CELLS = 5_000_000;
 /**
  * Find the number of distinct figures in a 2D grid. A figure is defined as a group of
  * adjacent `true` cells (horizontally or vertically).
@@ -16,11 +18,16 @@ export function countFigures (grid: boolean[][]): number {
         return 0;
     }
 
+    const rowCount = grid.length;
+    const colCount = grid[0]!.length;
+
+    if (rowCount * colCount > MAX_CELLS) {
+        throw new RangeError(`Grid too large: ${rowCount * colCount} cells (max ${MAX_CELLS})`);
+    }
+
     const gridCopy: boolean[][] = grid.map(row => [...row])
 
     let figuresCount = 0;
-    const rowCount = gridCopy.length;
-    const colCount = gridCopy[0]!.length;
 
     for (let row = 0; row < rowCount; row++) {
         for (let col = 0; col < colCount; col++) {

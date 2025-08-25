@@ -61,4 +61,12 @@ describe("countFigures", () => {
     expect(result).toBe(1)
     expect(duration).toBeLessThan(1000)
   })
+
+  it("throws error for excessively large grids", () => {
+    let grid = Array.from({ length: 5000 }, () =>
+      Array.from({ length: 1001 }, () => true))
+
+    expect(() => countFigures(grid)).toThrow(RangeError);
+    expect(() => countFigures(grid)).toThrow("Grid too large")
+  })
 })
